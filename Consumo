@@ -1,0 +1,49 @@
+public class Consumo {
+
+//Atributos:
+    private short kms;
+    private short litros;
+    private short vmed;
+    private float precio = 1.5F;
+//Métodos:
+    public void setKms(short k) {
+        this.kms = k;
+    }//Fin Procedimiento
+
+    public void setLitros(short l) {
+        this.litros = l;
+    }//Fin Procedimiento
+
+    public void setVmed(short v) {
+        this.vmed = v;
+    }//Fin Procedimiento
+
+    public void setPrecio(float p) {
+        this.precio = p;
+    }//Fin Procedimiento
+
+    public byte getTiempo() {
+        return (byte) (this.vmed / this.kms);
+    }//Fin Función
+
+    public float consumoMedio() {
+        return this.litros * 100F/this.kms;
+    }//Fin Función
+    public float consumoEuros(){
+        return this.precio*this.kms ;
+    }//Fin Función
+/*
+    Estos métodos son para probarlos en la aplicación que todo está correcto
+    */
+   public short getKms(){
+       return this.kms;
+   }//Fin Función
+   public short getLitros(){
+       return this.litros;
+   }//Fin Función
+   public short getVmed(){
+       return this.vmed;
+   }
+   public float getPrecio(){
+       return this.precio;
+   }//Fin Función
